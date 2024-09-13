@@ -1,0 +1,20 @@
+#:schema node_modules/wrangler/config-schema.json
+name = "api"
+main = ".worker-next/index.mjs"
+
+compatibility_date = "2024-08-29"
+compatibility_flags = ["nodejs_compat_v2"]
+workers_dev = true
+minify = true
+
+# Use the new Workers + Assets to host the static frontend files
+experimental_assets = { directory = ".worker-next/assets", binding = "ASSETS" }
+
+[vars]
+COMPANY_NAME = "Next.js"
+TWITTER_CREATOR = "@nextjs"
+TWITTER_SITE = "https://nextjs.org/commerce"
+SITE_NAME = "Acme Store"
+SHOPIFY_STORE_DOMAIN="https://quickstart-771da86d.myshopify.com"
+SHOPIFY_STOREFRONT_ACCESS_TOKEN="16a49819165c7a890b5c5c417c072175"
+SHOPIFY_REVALIDATION_SECRET=""
